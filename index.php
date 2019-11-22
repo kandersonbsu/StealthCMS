@@ -1,14 +1,13 @@
-<html>
-<head>
-    <title>
-        Call Center Management Simulator
-    </title>
-</head>
-<body>
 <?php
-    $name = "Jeffrey Epstein";
-    echo $name . " didn't kill himself.";
+    require "header.php";
 ?>
-</body>
 
-</html>
+    <main>
+        <p>You are logged out!</p>
+        <p>You are logged in!</p>
+    </main>
+
+<?php
+    require "footer.php";
+?>
+
