@@ -6,10 +6,10 @@ $dBPassword = "";
 $dBName = "loginsystem";
 */
 //TODO: Add in block for the remote server name
-$servername = "ec2-54-227-245-146.compute-1.amazonaws.com";
-$dBUsername = "ywracqjqjwphhz";
-$dBPassword = "9bb886781b1c8cdb4baedba375fb0313e2625e5b6cf6ea99e28644661235346e";
-$dBName = "d29qbatk7ppsi6";
+$servername = "us-cdbr-iron-east-05.cleardb.net";
+$dBUsername = "b2b6bcdb20cf3a";
+$dBPassword = "5dd350c0";
+$dBName = "heroku_40e4688a774732a";
 
 $connection = mysqli_connect($servername, $dBUsername, $dBPassword, $dBName);
 
