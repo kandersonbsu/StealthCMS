@@ -116,6 +116,10 @@ function accelerate(n) {
     myGamePiece.gravity = n;
 }
 
+function onTouch(){
+    alert("Fun");
+}
+
 
 document.addEventListener('keyup', event=>{
     if(event.keyCode === 87){
@@ -129,4 +133,4 @@ document.addEventListener('keydown', function(e){
     }
 })
 
-document.addEventListener('touchstart', accelerate(-.2));
+document.addEventListener('touchstart', onTouch);
