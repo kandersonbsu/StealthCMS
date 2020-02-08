@@ -120,6 +120,10 @@ function onTouch(){
     accelerate(-.2);
 }
 
+function touchRelease(){
+    accelerate(.05);
+}
+
 
 document.addEventListener('keyup', event=>{
     if(event.keyCode === 87){
@@ -134,3 +138,5 @@ document.addEventListener('keydown', function(e){
 })
 
 document.addEventListener('touchstart', onTouch);
+
+document.addEventListener('touchend', touchRelease);
