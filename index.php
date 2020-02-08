@@ -1,10 +1,13 @@
 <?php
     require "header.php";
 ?>
-
     <main>
-        <p>You are logged out!</p>
-        <p>You are logged in!</p>
+    <body>
+        <script src="/CMS/js/script.js"></script>
+        <script>
+            startGame();    
+        </script>
+    </body>
     </main>
 
 <?php

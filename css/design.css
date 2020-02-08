@@ -1,0 +1,27 @@
+.Login
+{
+    background-color: grey;
+    height: 200px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid black;
+    float:left;
+}
+
+#signup{
+
+}
+
+.header{
+    background-color: hotpink;
+    float:left;
+    width: 100%;
+}
+
+#picture{
+    float:left;
+}
+
+#linkList{
+    float:left;
+}
