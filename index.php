@@ -3,7 +3,7 @@
 ?>
     <main>
     <body>
-        <script src="/CMS/js/script.js"></script>
+        <script src="StealthCMS/CMS/js/script.js"></script>
         <script>
             startGame();    
         </script>
