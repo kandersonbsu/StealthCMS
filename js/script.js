@@ -117,7 +117,7 @@ function accelerate(n) {
 }
 
 function onTouch(){
-    alert("Fun");
+    accelerate(-.2);
 }
 
 
