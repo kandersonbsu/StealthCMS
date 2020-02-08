@@ -129,7 +129,4 @@ document.addEventListener('keydown', function(e){
     }
 })
 
-keyPushed = function(e){
-    var keyValue = e.keyCode ? e.keyCode:e.charCode;
-    alert(keyValue);
-}
+document.addEventListener('touchstart', accelerate(-.2));
