@@ -3,7 +3,7 @@
 ?>
     <main>
         <div id="canv">
-            <script src="/CMS/js/script.js"></script>
+            <script src="./js/script.js"></script>
             <script>
                 startGame();    
             </script>
