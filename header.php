@@ -5,21 +5,23 @@
         <meta charset="utf-8">
         <meta name="description" content="This is an example">
         <meta name=viewport content="width=device-width, intitial-scale=1">
-        <title></title>
+        <title>Call Center Management Simulator</title>
 
     </head>
     <body>
         <header class="header">
             <nav>
-                <a href="#" id="picture">
-                    <img src="img/test.png" alt="logo">
-                </a>
-                <ul id="linkList">
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="#">Test1</a></li>
-                    <li><a href="#">Test2</a></li>
-                    <li><a href="#">Test3</a></li>
-                </ul>
+                <div class="Picture">
+                    <a href="#" id="picture">
+                        <img src="img/test.png" alt="logo" id="picture">
+                    </a>
+                    <ul id="linkList">
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="#">Test1</a></li>
+                        <li><a href="#">Test2</a></li>
+                        <li><a href="#">Test3</a></li>
+                    </ul>
+                </div>
                 <div class="Login">
                     <form action="login.php" method="post">
                         <input type="text" name="email" placeholder="Username/Email...">
