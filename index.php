@@ -2,10 +2,12 @@
     require "header.php";
 ?>
     <main>
-        <script src="/CMS/js/script.js"></script>
-        <script>
-            startGame();    
-        </script>
+        <div id="canv">
+            <script src="/CMS/js/script.js"></script>
+            <script>
+                startGame();    
+            </script>
+        </div>
     </main>
 
 <?php
