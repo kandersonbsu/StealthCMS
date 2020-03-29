@@ -35,46 +35,20 @@ if(isset($_POST["signup-submit"]))
     }
     else
     {
-        $sql = "SELECT userName FROM users WHERE userName=?";
-        $stmt = mysqli_stmt_init($connection);
-        if(!mysqli_stmt_prepare($stmt, $sql))
-        {
+        try{
+            $db = Database();
+            $query = $db->prepare("INSERT INTO users(userName, userEmail, userPassword) VALUES(:userName,:userEmail,:userPassword)");
+            $query->bindParam("userName", $username, PDO::PARAM_STR);
+            $query->bindParam("userEmail", $email, PDO::PARAM_STR);
+            $hashedPW = hash('sha256', $password);
+            $query->bindParam("userPassword", $hashedPW, PDO::PARAM_STR);
+            $query->execute();
+            header("Location:../signup.php?signup=$username");
+        }catch(PDOException $e){
             header("Location:../signup.php?error=sqlerror");
-            exit();
-        }
-        else
-        {
-            mysqli_stmt_bind_param($stmt, "s", $username);
-            mysqli_stmt_execute($stmt);
-            mysqli_stmt_store_result($stmt);
-            $resultTick = mysqli_stmt_num_rows($stmt);
-            if($resultTick != 0)
-            {
-                header("Location:../signup.php?error=usernametaken&email=".$email);
-                exit();
-            }
-            else
-            {
-                $sql = "INSERT INTO users (userName, userEmail, userPassword) VALUES (?, ?, ?)";
-                $stmt = mysqli_stmt_init($connection);
-                if(!mysqli_stmt_prepare($stmt, $sql))
-                {
-                    header("Location:../signup.php?error=sqlerror");
-                    exit();
-                }
-                else
-                {
-                    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-                    mysqli_stmt_bind_param($stmt, "sss", $username, $email, $hashedPassword);
-                    mysqli_stmt_execute($stmt);
-                    header("Location:../signup.php?signup=success");
-                    exit();
-                }
-            }
+            exit($e->getMessage());
         }
     }
-    mysqli_stmt_close($stmt);
-    mysqli_close($connection);
 }
 else
 {

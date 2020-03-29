@@ -4,7 +4,7 @@
     <main>
         <div id="canv">
             <script src="./js/script.js"></script>
-            <script>
+            <script id="game">
                 startGame();    
             </script>
         </div>

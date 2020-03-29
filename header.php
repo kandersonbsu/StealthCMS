@@ -23,10 +23,10 @@
                     </ul>
                 </div>
                 <div class="Login">
-                    <form action="login.php" method="post">
+                    <form action="includes/login.inc.php" method="post">
                         <input type="text" name="email" placeholder="Username/Email...">
                         <input type="password" name="password" placeholder="Password...">
-                        <button type="submit" name="login">Login</button>
+                        <button type="submit" name="login-submit">Login</button>
                     </form>
                     <div id = "signup">
                     <a href="signup.php">Signup</a>
