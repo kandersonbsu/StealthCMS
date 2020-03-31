@@ -13,7 +13,7 @@
     <?php
         if(isset($_SESSION["username"]))
         {
-            echo "<div>You are logged in</div>";
+            echo "<div>Welcome back $_SESSION[username]!</div>";
         }
     ?>
 
